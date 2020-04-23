@@ -13,7 +13,7 @@ async function add(user){
 }
 
 function findAll(){
-    return db('users')
+    return db('familyMembers')
 }
 
 function findBy(filter){

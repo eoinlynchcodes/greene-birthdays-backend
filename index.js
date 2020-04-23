@@ -12,7 +12,13 @@ server.use(express.json());
 server.use(cors());
 
 server.get('/', (req, res) => {
-    res.status(200).json({ message: 'Hi there...'})
+    Helpers.findAll()
+    .then(response =>{
+        res.status(200).json(response);
+    })
+    .catch(error => {
+        res.status(500).json(error);
+    })
 })
 
 server.post('/api/register', (req, res) => {
