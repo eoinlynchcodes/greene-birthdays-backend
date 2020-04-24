@@ -55,7 +55,6 @@ server.post('/login', (req, res) => {
     });
 });
 
-
 server.get('/familyList', (req, res) => {
     Helpers.findAllFamilyMembers()
     .then(response =>{
